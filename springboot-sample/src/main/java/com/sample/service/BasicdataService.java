@@ -1,10 +1,13 @@
 package com.sample.service;
 
 import java.util.List;
-import com.sample.model.BasicData;
+import java.util.Optional;
+
+import com.sample.model.Register;
 
 public interface BasicdataService
 {
-	List<BasicData> findAll();
-	BasicData save(BasicData data);
+	List<Register> findAll();
+	Register save(Register data);
+	Optional<Register> findById(Integer regId);
 }
