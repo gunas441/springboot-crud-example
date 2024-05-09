@@ -1,9 +1,8 @@
 package com.sample.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.sample.model.Register;
+import com.sample.model.Datas;
 
-public interface BasicdataRepository extends JpaRepository<Register,Integer>
-{
+public interface DatasRepository extends JpaRepository<Datas,Integer>{
 
 }

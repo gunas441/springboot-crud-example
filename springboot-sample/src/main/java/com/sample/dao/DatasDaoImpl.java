@@ -3,35 +3,34 @@ package com.sample.dao;
 import jakarta.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
-
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import com.sample.model.Register;
-import com.sample.repository.BasicdataRepository;
+import com.sample.model.Datas;
+import com.sample.repository.DatasRepository;
 
 @Transactional
 @Repository
-public class BasicdataDaoImpl implements BasicdataDao 
+public class DatasDaoImpl implements DatasDao 
 {
 	@Autowired
 	DataSource dataSource;
 	
 	@Autowired
-	BasicdataRepository basicdataRepository;
+	DatasRepository basicdataRepository;
 	
 	@Override
-	public List<Register> findAll() {
+	public List<Datas> findAll() {
 		return basicdataRepository.findAll();
 	}
 
 	@Override
-	public Register save(Register data) {
+	public Datas save(Datas data) {
 		return basicdataRepository.save(data);
 	}
 
 	@Override
-	public Optional<Register> findById(Integer regId) {
+	public Optional<Datas> findById(Integer regId) {
 		return basicdataRepository.findById(regId);
 	}
 }

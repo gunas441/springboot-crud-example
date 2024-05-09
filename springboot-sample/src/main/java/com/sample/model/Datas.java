@@ -8,25 +8,23 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="register")
-public class Register 
+@Table(name="basic")
+public class Datas 
 {
 	@Id
-	@Column(name="REGID")
+	@Column(name="id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer regId;
-	@Column(name="FULLNAME")
+	private Integer id;
+	@Column(name="fullname")
 	private String fullName;
-	@Column(name="EMAIL")
-	private String email;
-	@Column(name="PASSWORD")
-	private String password;
+	@Column(name="salary")
+	private Integer salary;
 	
-	public Integer getRegId() {
-		return regId;
+	public Integer getId() {
+		return id;
 	}
-	public void setRegId(Integer regId) {
-		this.regId = regId;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	public String getFullName() {
 		return fullName;
@@ -34,16 +32,10 @@ public class Register
 	public void setFullName(String fullName) {
 		this.fullName = fullName;
 	}
-	public String getEmail() {
-		return email;
+	public Integer getSalary() {
+		return salary;
 	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setSalary(Integer salary) {
+		this.salary = salary;
 	}
 }

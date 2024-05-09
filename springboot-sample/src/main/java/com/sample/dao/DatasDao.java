@@ -2,12 +2,11 @@ package com.sample.dao;
 
 import java.util.List;
 import java.util.Optional;
+import com.sample.model.Datas;
 
-import com.sample.model.Register;
-
-public interface BasicdataDao
+public interface DatasDao
 {
-	List<Register> findAll();
-	Register save(Register data);
-	Optional<Register> findById(Integer regId);
+	List<Datas> findAll();
+	Datas save(Datas data);
+	Optional<Datas> findById(Integer regId);
 }
